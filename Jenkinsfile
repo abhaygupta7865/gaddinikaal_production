@@ -27,17 +27,17 @@ pipeline {
 
     post {
         always {
-            steps {
+            script {
                 echo 'This will always run'
             }
         }
         success {
-            steps {
+            script {
                 echo 'Build and deployment successful!'
             }
         }
         failure {
-            steps {
+            script {
                 echo 'Build failed!'
             }
         }
