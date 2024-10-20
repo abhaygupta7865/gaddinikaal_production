@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image from the Dockerfile in the frontend directory
-                    sh 'docker build -t frontend ./frontend'
+                    sh 'docker build -t frontend .'
                 }
             }
         }
@@ -19,7 +19,7 @@ pipeline {
                     sh 'docker rm frontend-container || true'
 
                     // Run the Docker container
-                    sh 'docker run -d --name frontend-container -p 80:80 frontend'
+                    sh 'docker run -d --name frontend-container -p 8081:8081 frontend'
                 }
             }
         }

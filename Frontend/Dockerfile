@@ -23,7 +23,7 @@ FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 
 # Step 9: Expose the port the app will run on
-EXPOSE 3000
+EXPOSE 8081
 
 # Step 10: Start the Nginx server
 CMD ["nginx", "-g", "daemon off;"]
