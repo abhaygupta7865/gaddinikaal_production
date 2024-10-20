@@ -27,8 +27,7 @@ pipeline {
 
     post {
         always {
-            // Archive any artifacts if needed
-            // archiveArtifacts artifacts: '**/dist/**', fingerprint: true
+            echo 'This will always run'
         }
         success {
             echo 'Build and deployment successful!'
